@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D723FFE1FCEF595005885BD /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D723FFC1FCEF595005885BD /* haarcascade_frontalface_alt.xml */; };
+		1D723FFF1FCEF595005885BD /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D723FFD1FCEF595005885BD /* haarcascade_frontalface_alt_tree.xml */; };
+		1DABBBD41FCEA0AD00D83837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABBBD31FCEA0AD00D83837 /* AppDelegate.swift */; };
+		1DABBBD61FCEA0AD00D83837 /* OpenCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABBBD51FCEA0AD00D83837 /* OpenCVViewController.swift */; };
+		1DABBBD91FCEA0AD00D83837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DABBBD71FCEA0AD00D83837 /* Main.storyboard */; };
+		1DABBBDB1FCEA0AD00D83837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DABBBDA1FCEA0AD00D83837 /* Assets.xcassets */; };
+		1DABBBDE1FCEA0AD00D83837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DABBBDC1FCEA0AD00D83837 /* LaunchScreen.storyboard */; };
+		1DABBBEC1FCEAC4000D83837 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DABBBEB1FCEAC4000D83837 /* OpenCVWrapper.mm */; };
+		1DABBBF01FCEB05900D83837 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DABBBEF1FCEB05900D83837 /* UIImage+OpenCV.mm */; };
+		1DABBBF31FCEBB0700D83837 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1DABBBF21FCEBB0700D83837 /* haarcascade_frontalface_alt2.xml */; };
+		1DABBBF51FCEF3BC00D83837 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1DABBBF41FCEF3BC00D83837 /* haarcascade_frontalface_default.xml */; };
+		32BEC483A64230840834CF68 /* Pods_FaceMorpher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1229635ADA6430BD5D8644F /* Pods_FaceMorpher.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D723FFC1FCEF595005885BD /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		1D723FFD1FCEF595005885BD /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		1DABBBD01FCEA0AD00D83837 /* FaceMorpher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceMorpher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DABBBD31FCEA0AD00D83837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DABBBD51FCEA0AD00D83837 /* OpenCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCVViewController.swift; sourceTree = "<group>"; };
+		1DABBBD81FCEA0AD00D83837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DABBBDA1FCEA0AD00D83837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DABBBDD1FCEA0AD00D83837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DABBBDF1FCEA0AD00D83837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DABBBEA1FCEAC4000D83837 /* OpenCVWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		1DABBBEB1FCEAC4000D83837 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		1DABBBED1FCEAC8500D83837 /* FaceMorpher-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FaceMorpher-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DABBBEE1FCEB05900D83837 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		1DABBBEF1FCEB05900D83837 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		1DABBBF21FCEBB0700D83837 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		1DABBBF41FCEF3BC00D83837 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		BF6BF66E83F0FBB4878AEAFC /* Pods-FaceMorpher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceMorpher.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceMorpher/Pods-FaceMorpher.release.xcconfig"; sourceTree = "<group>"; };
+		D8C3DE23158820F9735347E1 /* Pods-FaceMorpher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceMorpher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceMorpher/Pods-FaceMorpher.debug.xcconfig"; sourceTree = "<group>"; };
+		F1229635ADA6430BD5D8644F /* Pods_FaceMorpher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceMorpher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DABBBCD1FCEA0AD00D83837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BEC483A64230840834CF68 /* Pods_FaceMorpher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DABBBC71FCEA0AD00D83837 = {
+			isa = PBXGroup;
+			children = (
+				1DABBBD21FCEA0AD00D83837 /* FaceMorpher */,
+				1DABBBD11FCEA0AD00D83837 /* Products */,
+				D2E064FE96F84221DDCB6DB5 /* Pods */,
+				295387899461DE3DE7FBDC56 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DABBBD11FCEA0AD00D83837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DABBBD01FCEA0AD00D83837 /* FaceMorpher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DABBBD21FCEA0AD00D83837 /* FaceMorpher */ = {
+			isa = PBXGroup;
+			children = (
+				1DABBBF11FCEBAF200D83837 /* HaarCascades */,
+				1DABBBE51FCEAB9B00D83837 /* Wrappers */,
+				1DABBBD31FCEA0AD00D83837 /* AppDelegate.swift */,
+				1DABBBD51FCEA0AD00D83837 /* OpenCVViewController.swift */,
+				1DABBBD71FCEA0AD00D83837 /* Main.storyboard */,
+				1DABBBDA1FCEA0AD00D83837 /* Assets.xcassets */,
+				1DABBBDC1FCEA0AD00D83837 /* LaunchScreen.storyboard */,
+				1DABBBDF1FCEA0AD00D83837 /* Info.plist */,
+			);
+			path = FaceMorpher;
+			sourceTree = "<group>";
+		};
+		1DABBBE51FCEAB9B00D83837 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				1DABBBED1FCEAC8500D83837 /* FaceMorpher-Bridging-Header.h */,
+				1DABBBEA1FCEAC4000D83837 /* OpenCVWrapper.h */,
+				1DABBBEB1FCEAC4000D83837 /* OpenCVWrapper.mm */,
+				1DABBBEE1FCEB05900D83837 /* UIImage+OpenCV.h */,
+				1DABBBEF1FCEB05900D83837 /* UIImage+OpenCV.mm */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		1DABBBF11FCEBAF200D83837 /* HaarCascades */ = {
+			isa = PBXGroup;
+			children = (
+				1D723FFD1FCEF595005885BD /* haarcascade_frontalface_alt_tree.xml */,
+				1D723FFC1FCEF595005885BD /* haarcascade_frontalface_alt.xml */,
+				1DABBBF41FCEF3BC00D83837 /* haarcascade_frontalface_default.xml */,
+				1DABBBF21FCEBB0700D83837 /* haarcascade_frontalface_alt2.xml */,
+			);
+			name = HaarCascades;
+			sourceTree = "<group>";
+		};
+		295387899461DE3DE7FBDC56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1229635ADA6430BD5D8644F /* Pods_FaceMorpher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2E064FE96F84221DDCB6DB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3DE23158820F9735347E1 /* Pods-FaceMorpher.debug.xcconfig */,
+				BF6BF66E83F0FBB4878AEAFC /* Pods-FaceMorpher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DABBBCF1FCEA0AD00D83837 /* FaceMorpher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DABBBE21FCEA0AD00D83837 /* Build configuration list for PBXNativeTarget "FaceMorpher" */;
+			buildPhases = (
+				8EEB75EB585CE1883A8D96F6 /* [CP] Check Pods Manifest.lock */,
+				1DABBBCC1FCEA0AD00D83837 /* Sources */,
+				1DABBBCD1FCEA0AD00D83837 /* Frameworks */,
+				1DABBBCE1FCEA0AD00D83837 /* Resources */,
+				EF51CCB59B803228E8541B23 /* [CP] Embed Pods Frameworks */,
+				1089D03750033AAF86DCBCD3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceMorpher;
+			productName = FaseMorpher;
+			productReference = 1DABBBD01FCEA0AD00D83837 /* FaceMorpher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DABBBC81FCEA0AD00D83837 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Dmitry Rybochkin";
+				TargetAttributes = {
+					1DABBBCF1FCEA0AD00D83837 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 1DABBBCB1FCEA0AD00D83837 /* Build configuration list for PBXProject "FaceMorpher" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DABBBC71FCEA0AD00D83837;
+			productRefGroup = 1DABBBD11FCEA0AD00D83837 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DABBBCF1FCEA0AD00D83837 /* FaceMorpher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DABBBCE1FCEA0AD00D83837 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DABBBDE1FCEA0AD00D83837 /* LaunchScreen.storyboard in Resources */,
+				1DABBBDB1FCEA0AD00D83837 /* Assets.xcassets in Resources */,
+				1DABBBF31FCEBB0700D83837 /* haarcascade_frontalface_alt2.xml in Resources */,
+				1DABBBF51FCEF3BC00D83837 /* haarcascade_frontalface_default.xml in Resources */,
+				1D723FFE1FCEF595005885BD /* haarcascade_frontalface_alt.xml in Resources */,
+				1DABBBD91FCEA0AD00D83837 /* Main.storyboard in Resources */,
+				1D723FFF1FCEF595005885BD /* haarcascade_frontalface_alt_tree.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1089D03750033AAF86DCBCD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceMorpher/Pods-FaceMorpher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EEB75EB585CE1883A8D96F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceMorpher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF51CCB59B803228E8541B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FaceMorpher/Pods-FaceMorpher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OpenCV/opencv2.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/opencv2.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceMorpher/Pods-FaceMorpher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DABBBCC1FCEA0AD00D83837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DABBBD61FCEA0AD00D83837 /* OpenCVViewController.swift in Sources */,
+				1DABBBD41FCEA0AD00D83837 /* AppDelegate.swift in Sources */,
+				1DABBBF01FCEB05900D83837 /* UIImage+OpenCV.mm in Sources */,
+				1DABBBEC1FCEAC4000D83837 /* OpenCVWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DABBBD71FCEA0AD00D83837 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DABBBD81FCEA0AD00D83837 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DABBBDC1FCEA0AD00D83837 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DABBBDD1FCEA0AD00D83837 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DABBBE01FCEA0AD00D83837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DABBBE11FCEA0AD00D83837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DABBBE31FCEA0AD00D83837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C3DE23158820F9735347E1 /* Pods-FaceMorpher.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZQ9U2EUQ6N;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceMorpher/lib",
+				);
+				INFOPLIST_FILE = FaceMorpher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/FaceMorpher/lib";
+				OTHER_CFLAGS = (
+					"-DDLIB_JPEG_SUPPORT",
+					"-DDLIB_NO_GUI_SUPPORT",
+					"-DNDEBUG",
+					"-DDLIB_USE_BLAS",
+					"-DDLIB_USE_LAPACK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.stream.FaceMorpher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "faa6ac79-6d50-4952-854d-3a7d42e79d0c";
+				PROVISIONING_PROFILE_SPECIFIER = "Stream Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceMorpher/Wrappers/FaceMorpher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DABBBE41FCEA0AD00D83837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF6BF66E83F0FBB4878AEAFC /* Pods-FaceMorpher.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZQ9U2EUQ6N;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceMorpher/lib",
+				);
+				INFOPLIST_FILE = FaceMorpher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/FaceMorpher/lib";
+				OTHER_CFLAGS = (
+					"-DDLIB_JPEG_SUPPORT",
+					"-DDLIB_NO_GUI_SUPPORT",
+					"-DNDEBUG",
+					"-DDLIB_USE_BLAS",
+					"-DDLIB_USE_LAPACK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.stream.FaceMorpher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "faa6ac79-6d50-4952-854d-3a7d42e79d0c";
+				PROVISIONING_PROFILE_SPECIFIER = "Stream Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceMorpher/Wrappers/FaceMorpher-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DABBBCB1FCEA0AD00D83837 /* Build configuration list for PBXProject "FaceMorpher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DABBBE01FCEA0AD00D83837 /* Debug */,
+				1DABBBE11FCEA0AD00D83837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DABBBE21FCEA0AD00D83837 /* Build configuration list for PBXNativeTarget "FaceMorpher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DABBBE31FCEA0AD00D83837 /* Debug */,
+				1DABBBE41FCEA0AD00D83837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DABBBC81FCEA0AD00D83837 /* Project object */;
+}

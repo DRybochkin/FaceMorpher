@@ -12,7 +12,7 @@ import UIKit
 class OpenCVViewController: UIViewController {
     
     let scaleFactor: CGFloat = 0.25
-    let faceCascadeFilename = "haarcascade_frontalface_alt_tree"
+    let faceCascadeFilename = "haarcascade_frontalface_default"
     let eyesCascadeFilename = "haarcascade_frontalface_alt_tree"
     let noseCascadeFilename = "haarcascade_frontalface_alt_tree"
     let mouthCascadeFilename = "haarcascade_frontalface_alt_tree"
@@ -26,6 +26,7 @@ class OpenCVViewController: UIViewController {
     var isSingleFace = true
 
     var captureSession: AVCaptureSession?
+    var captureDevicePosition = AVCaptureDevice.Position.back
     var captureDeviceInput: AVCaptureDeviceInput?
     var captureVideoDataOutput: AVCaptureVideoDataOutput?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -52,18 +53,16 @@ class OpenCVViewController: UIViewController {
     
     func configureCamera(position: AVCaptureDevice.Position = .back) {
         captureSession?.stopRunning()
-//        videoPreviewLayer?.removeFromSuperlayer()
         if let captureDeviceInput = captureDeviceInput {
             captureSession?.removeInput(captureDeviceInput)
         }
-//        if let captureVideoDataOutput = captureVideoDataOutput {
-//            captureSession?.removeOutput(captureVideoDataOutput)
-//        }
 
         guard let captureDevice = AVCaptureDevice.devices().first(where: { $0.position == position && $0.hasMediaType(.video) }), let inputDevice = try? AVCaptureDeviceInput(device: captureDevice) else {
             print("error AVCaptureDevice")
             return
         }
+        
+        captureDevicePosition = position
         
         if captureSession == nil {
             captureSession = AVCaptureSession()
@@ -304,7 +303,7 @@ extension OpenCVViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let videoOrientation = connection.videoOrientation
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer),
-            let faces = openCVWrapper?.processFrame(pixelBuffer, videoOrientation, scaleFactor, isSingleFace) as? [CGRect],
+            let faces = openCVWrapper?.processFrame(pixelBuffer, captureDevicePosition, videoOrientation, scaleFactor, isSingleFace) as? [CGRect],
             !faces.isEmpty else {
                 faceViews.forEach({ $0.isHidden = true })
             return

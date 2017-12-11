@@ -14,6 +14,6 @@
 
 -(NSString *) openCVVersionString;
 -(void) loadHaarCascades:(NSString*)faceCascadeName :(NSString*)eyeCascadeName :(NSString*)noseCascadeName :(NSString*) mouthCascadeName;
--(NSArray<NSValue *>*) processFrame:(CVPixelBufferRef)pixelBuffer :(AVCaptureVideoOrientation)videOrientation :(CGFloat)scaleFactor :(BOOL)isSingleFace;
+-(NSArray<NSValue *>*) processFrame:(CVPixelBufferRef)pixelBuffer :(AVCaptureDevicePosition)position :(AVCaptureVideoOrientation)videOrientation :(CGFloat)scaleFactor :(BOOL)isSingleFace;
 
 @end

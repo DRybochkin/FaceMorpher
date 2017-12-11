@@ -54,7 +54,7 @@ cv::CascadeClassifier _mouthCascade;
 }
 
 
--(NSArray<NSValue *>*) processFrame:(CVPixelBufferRef)pixelBuffer :(AVCaptureVideoOrientation)videOrientation :(CGFloat)scaleFactor :(BOOL)isSingleObject {
+-(NSArray<NSValue *>*) processFrame:(CVPixelBufferRef)pixelBuffer :(AVCaptureDevicePosition)position :(AVCaptureVideoOrientation)videOrientation :(CGFloat)scaleFactor :(BOOL)isSingleObject {
     OSType format = CVPixelBufferGetPixelFormatType(pixelBuffer);
     CGRect videoRect = CGRectMake(0.0f, 0.0f, CVPixelBufferGetWidth(pixelBuffer), CVPixelBufferGetHeight(pixelBuffer));
     
@@ -66,7 +66,7 @@ cv::CascadeClassifier _mouthCascade;
         
         cv::Mat mat(videoRect.size.height, videoRect.size.width, CV_8UC1, baseaddress, 0);
         
-        faces = [self processFrame:mat videoRect:videoRect videoOrientation:videOrientation scaleFactor: scaleFactor isSingleFace: isSingleObject];
+        faces = [self processFrame:mat videoRect:videoRect position: position videoOrientation:videOrientation scaleFactor: scaleFactor isSingleFace: isSingleObject];
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
     } else if (format == kCVPixelFormatType_32BGRA) {
@@ -75,7 +75,7 @@ cv::CascadeClassifier _mouthCascade;
         
         cv::Mat mat(videoRect.size.height, videoRect.size.width, CV_8UC4, baseaddress, 0);
         
-        faces = [self processFrame:mat videoRect:videoRect videoOrientation:videOrientation scaleFactor: scaleFactor isSingleFace: isSingleObject];
+        faces = [self processFrame:mat videoRect:videoRect position: position videoOrientation:videOrientation scaleFactor: scaleFactor isSingleFace: isSingleObject];
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
     } else {
@@ -84,7 +84,7 @@ cv::CascadeClassifier _mouthCascade;
     return faces;
 }
 
-- (NSArray<NSValue *>*) processFrame:(cv::Mat &)mat videoRect:(CGRect)rect videoOrientation:(AVCaptureVideoOrientation)videOrientation scaleFactor:(CGFloat) scaleFactor isSingleFace:(BOOL)isSingleFace
+- (NSArray<NSValue *>*) processFrame:(cv::Mat &)mat videoRect:(CGRect)rect position:(AVCaptureDevicePosition)position videoOrientation:(AVCaptureVideoOrientation)videOrientation scaleFactor:(CGFloat) scaleFactor isSingleFace:(BOOL)isSingleFace
 {
     cv::resize(mat, mat, cv::Size(), scaleFactor, scaleFactor, CV_INTER_LINEAR);
     rect.size.width *= scaleFactor;
@@ -125,22 +125,20 @@ cv::CascadeClassifier _mouthCascade;
             cv::flip(mat, mat, 1);
         }
     }
-
-// TODO доработать для обратной камеры с учетом того что закомпентировано ниже
-    // Portrait front
-//    cv::transpose(mat, mat);
     
-    // PortraitDown front
-//    cv::flip(mat, mat, 2);
-//    cv::transpose(mat, mat);
-//    cv::flip(mat, mat, 2);
-    
-    //LandscapeRight
-//    cv::flip(mat, mat, 2);
-
-    //LandscapeLeft
-//    cv::flip(mat, mat, 0);
-
+    if (position == AVCaptureDevicePositionFront) {
+        if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
+            cv::transpose(mat, mat);
+        } else if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortraitUpsideDown) {
+            cv::flip(mat, mat, 2);
+            cv::transpose(mat, mat);
+            cv::flip(mat, mat, 2);
+        } else if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeRight) {
+            cv::flip(mat, mat, 2);
+        } else if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft) {
+            cv::flip(mat, mat, 0);
+        }
+    }
 
     videOrientation = AVCaptureVideoOrientationPortrait;
     
